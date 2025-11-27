@@ -4,10 +4,10 @@
       <img class="logo" src="/assets/logo.png" alt="JG Motors" />
     </a>
 
-    <nav class="nav">
-      <a class="nav-link" routerLink="/" aria-current="page">Início</a>
-      <a class="nav-link" routerLink="/planos">Planos</a>
-      <a class="nav-link cta" routerLink="/contato">Contato</a>
+    <nav class="nav" [class.open]="menuOpen">
+      <a class="nav-link" routerLink="/" aria-current="page" (click)="closeMenu()">Início</a>
+      <a class="nav-link" routerLink="/planos" (click)="closeMenu()">Planos</a>
+      <a class="nav-link cta" routerLink="/contato" (click)="closeMenu()">Contato</a>
     </nav>
 
     <div class="controls">
@@ -22,7 +22,7 @@
         </ng-container>
       </button>
 
-      <button class="burger" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <button class="burger" [attr.aria-label]="menuOpen ? 'Fechar menu' : 'Abrir menu'" [attr.aria-expanded]="menuOpen" (click)="toggleMenu()">☰</button>
     </div>
   </div>
 </header>

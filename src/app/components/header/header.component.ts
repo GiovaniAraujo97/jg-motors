@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   theme: 'light' | 'dark' = 'light';
+  menuOpen = false;
 
   ngOnInit(): void {
     const saved = localStorage.getItem('jg-theme') as 'light' | 'dark' | null;
@@ -24,6 +25,14 @@ export class HeaderComponent implements OnInit {
 
   toggleTheme() {
     this.setTheme(this.theme === 'light' ? 'dark' : 'light');
+  }
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  closeMenu() {
+    this.menuOpen = false;
   }
 
   private setTheme(value: 'light' | 'dark') {
