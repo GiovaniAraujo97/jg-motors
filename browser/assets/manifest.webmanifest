@@ -1,0 +1,11 @@
+{
+  "name": "JG Motors",
+  "short_name": "JG Motors",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f172a",
+  "icons": [
+    { "src": "/assets/logo.png", "sizes": "128x128", "type": "image/svg+xml" }
+  ]
+}
