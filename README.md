@@ -1,59 +1,60 @@
-# JgMotors
+# JG Motors — SPA Profissional
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+Este repositório contém uma Single Page Application (SPA) moderna desenvolvida com Angular 19 — um site profissional, responsivo e preparado para crescer.
 
-## Development server
+Principais características:
 
-To start a local development server, run:
+- Layout moderno com Header, Hero, Features, Galeria e Contato (componentes standalone).
+- Projeto organizado com SCSS, componentes separados e rotas (SPA com navegação rápida).
+- Começo ideal para transformar em um site corporativo profissional (PWA, CI/CD, hosting, etc.).
 
-```bash
-ng serve
+## Sobre o negócio (JG Motors — Empréstimo de motos)
+
+A JG Motors oferece empréstimo de motos (aluguel) com foco em mobilidade rápida e descomplicada:
+
+- Empréstimo de motos para clientes que precisam de mobilidade sem comprar
+- Planos flexíveis (semanal, mensal)
+- Opções para entregadores / profissionais que usam a moto para trabalhar
+- Aluguéis para lazer e viagens curtas
+- Entrega e retirada no endereço do cliente
+- Seguro incluso (manutenção preventiva disponível no plano mensal)
+
+## Como rodar (desenvolvimento)
+
+1. Instale as dependências (Node.js 18+ recomendado):
+
+```powershell
+npm install
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+2. Inicie o servidor de desenvolvimento (aberto no navegador):
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```powershell
+npm run dev
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+O projeto abre em http://localhost:4200/ por padrão.
 
-```bash
-ng generate --help
+## Construir (produção)
+
+```powershell
+npm run build:prod
 ```
 
-## Building
+Os artefatos são gerados em `dist/jg-motors`.
 
-To build the project run:
+## Testes
 
-```bash
-ng build
+```powershell
+npm test
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Próximos passos / ideias para transformar em um site "top"
 
-## Running unit tests
+- Adicionar integração com backend (API REST ou GraphQL) para envio de formulários e agendamento.
+- Integração de formulário com backend para agendamento e reserva (API REST + banco de dados).
+- Autenticação de clientes e área privada para agendamentos/histórico.
+- Otimizações de performance (imagem lazy, cache, critical CSS) e testes E2E.
+- Pipeline CI (GitHub Actions) para build & preview automático, e hospedagem (Vercel / Netlify / Azure Static Web Apps).
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Se quiser, eu posso: adicionar um CI (GitHub Actions) + um deploy target, transformar o formulário em funcional (com backend) e preparar um design final com conteúdo real.

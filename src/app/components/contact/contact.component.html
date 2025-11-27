@@ -1,0 +1,52 @@
+<section class="contact container">
+  <h3>Solicitar empréstimo / Fale com a gente</h3>
+  <p class="muted">Conte como quer usar a moto (trabalho, entrega, lazer) — retornamos em até 24 horas com opções e preços.</p>
+
+  <form class="contact-form" (submit)="onSubmit($event)">
+    <div *ngIf="submitted" class="card" style="border-left:4px solid var(--accent-start);margin-bottom:1rem">
+      <strong>{{ submittedMessage }}</strong>
+    </div>
+    <div class="row">
+        <input placeholder="Seu nome" name="name" required />
+        <input placeholder="Telefone" name="phone" type="tel" required />
+    </div>
+
+    <div class="row">
+        <input placeholder="Seu e‑mail" name="email" type="email" required />
+        <input placeholder="CPF ou CNPJ" name="cpf" />
+    </div>
+
+    <div class="row">
+      <div class="plan-block" style="display:flex;gap:.5rem;align-items:center;width:100%">
+        <span style="min-width:120px">Plano preferido</span>
+        <div class="plan-options">
+          <label class="plan-option">
+            <input type="radio" name="plan" value="6 meses" checked />
+            <span class="option">6 Meses</span>
+          </label>
+          <label class="plan-option">
+            <input type="radio" name="plan" value="12 meses" />
+            <span class="option">12 Meses</span>
+          </label>
+          <label class="plan-option">
+            <input type="radio" name="plan" value="15 meses" />
+            <span class="option">15 Meses</span>
+          </label>
+        </div>
+      </div>
+
+      <label style="display:flex;gap:.5rem;align-items:center">
+        <span style="min-width:120px">Data de início</span>
+        <input type="date" name="startDate" />
+      </label>
+    </div>
+
+    <input placeholder="Endereço de entrega (se aplicável)" name="address" />
+
+    <textarea rows="5" placeholder="Observações adicionais (uso: trabalho/entrega/lazer, preferências)" name="notes"></textarea>
+
+    <div class="actions">
+      <button class="btn primary" type="submit">Enviar solicitação</button>
+    </div>
+  </form>
+</section>

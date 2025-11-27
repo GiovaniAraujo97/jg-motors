@@ -1,0 +1,28 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" routerLink="/">
+      <img class="logo" src="/assets/logo.png" alt="JG Motors" />
+    </a>
+
+    <nav class="nav">
+      <a class="nav-link" routerLink="/" aria-current="page">Início</a>
+      <a class="nav-link" routerLink="/planos">Planos</a>
+      <a class="nav-link cta" routerLink="/contato">Contato</a>
+    </nav>
+
+    <div class="controls">
+      <button class="theme-toggle" (click)="toggleTheme()" [attr.aria-label]="theme === 'light' ? 'Ativar tema escuro' : 'Ativar tema claro'">
+        <ng-container *ngIf="theme === 'light'">
+          <!-- moon icon -->
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" fill="currentColor" /></svg>
+        </ng-container>
+        <ng-container *ngIf="theme === 'dark'">
+          <!-- sun icon -->
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.995 12c0 2.761 2.246 5 5.005 5 2.762 0 5.005-2.239 5.005-5 0-2.762-2.243-5-5.005-5-2.759 0-5.005 2.238-5.005 5z" fill="currentColor"/></svg>
+        </ng-container>
+      </button>
+
+      <button class="burger" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
